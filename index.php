@@ -21,7 +21,9 @@ $s3 = S3Client::factory(array(
        'credentials' => array(
          'key'    => $ACCESSKEY,
          'secret' => $SECRETKEY
-)
+		)
+));
+
 ?>
 
 <body>
