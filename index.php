@@ -5,7 +5,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
 </head>
-<?php $mystring = "Hello IBM COS World!"; ?>
+
+<?php 
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
+$mystring = "Hello IBM COS World!";
+?>
+
 <body>
 	<table>
 		<tr>
