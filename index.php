@@ -26,10 +26,7 @@ $SECRETKEY = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ';
 //         'key'    => $ACCESSKEY,
 //         'secret' => $SECRETKEY
 //		])]);
-}
-catch (Exception $e){
-	echo 'Caught exception: ',  $e->getmessage(), "\n";
-}
+
 ?>
 
 <body>
