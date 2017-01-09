@@ -14,6 +14,14 @@ $mystring = "Hello IBM COS World!";
 $ENDPOINT = 's3-api.us-geo.objectstorage.softlayer.net';
 $ACCESSKEY = 'VfAY8vRGl6LvV4XjZaM7';
 $SECRETKEY = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ';
+$s3 = S3Client::factory(array(
+       'version' => 'latest',
+       'region'  => '',
+       'endpoint' => 'http://'.$ENDPOINT,
+       'credentials' => array(
+         'key'    => $ACCESSKEY,
+         'secret' => $SECRETKEY
+)
 ?>
 
 <body>
