@@ -27,17 +27,6 @@ $s3 = S3Client::factory(array(
     )
 ));
 
-echo 'looping through buckets';
-//try {
-//    $result = $s3->listBuckets(array());
-//    foreach ($result['Buckets'] as $bucket) {
-//        echo $bucket['Name'];
-//        echo "<br>";
-//    }
-//} catch (S3Exception $e) {
-    echo $e->getMessage() . "\n";
-//}
-
 ?>
 
 <body>
@@ -50,6 +39,7 @@ echo 'looping through buckets';
 				<h1 id = "message"><?php echo $mystring; ?></h1>
 				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
 				<?php
+					echo 'looping through buckets';
 					$result = $s3->listBuckets(array());
 					foreach ($result['Buckets'] as $bucket) {
 					echo "<p>";
