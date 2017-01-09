@@ -26,6 +26,18 @@ $s3 = S3Client::factory(array(
          'secret' => $SECRETKEY
     )
 ));
+
+echo 'looping through buckets';
+//try {
+//    $result = $s3->listBuckets(array());
+//    foreach ($result['Buckets'] as $bucket) {
+//        echo $bucket['Name'];
+//        echo "<br>";
+//    }
+//} catch (S3Exception $e) {
+    echo $e->getMessage() . "\n";
+//}
+
 ?>
 
 <body>
@@ -37,6 +49,14 @@ $s3 = S3Client::factory(array(
 			<td>
 				<h1 id = "message"><?php echo $mystring; ?></h1>
 				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
+				<?php
+					$result = $s3->listBuckets(array());
+					foreach ($result['Buckets'] as $bucket) {
+					echo "<p>";
+					echo $bucket['Name'];
+					echo "</p>";
+					}
+				?>
 			</td>
 		</tr>
 	</table>
