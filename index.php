@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 
-<?php 
+<?php
+
+try{
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $mystring = "Hello IBM COS World!";
@@ -22,7 +24,10 @@ $s3 =  new Aws\S3\S3Client([
          'key'    => $ACCESSKEY,
          'secret' => $SECRETKEY
 		])]);
-
+}
+catch (Exception $e){
+	echo 'Caught exception: ',  $e->getmessage(), "\n";
+}
 ?>
 
 <body>
