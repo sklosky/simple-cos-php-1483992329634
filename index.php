@@ -25,43 +25,43 @@
 
 echo 'starting list cos-buckets';
 
-use Aws\S3\S3Client;
-use Aws\S3\Exception\S3Exception;
-date_default_timezone_set ( 'America/New_York' );
+//use Aws\S3\S3Client;
+//use Aws\S3\Exception\S3Exception;
+//date_default_timezone_set ( 'America/New_York' );
 
 echo 'initializing variables';
 // Initialize variables
-$ENDPOINT = 's3-api.us-geo.objectstorage.softlayer.net';
-$ACCESSKEY = 'VfAY8vRGl6LvV4XjZaM7';
-$SECRETKEY = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ';
+//$ENDPOINT = 's3-api.us-geo.objectstorage.softlayer.net';
+//$ACCESSKEY = 'VfAY8vRGl6LvV4XjZaM7';
+//$SECRETKEY = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ';
 
 //
 // Instantiate the client.
 //
 echo 'instantiating the client'
-$s3 = S3Client::factory(array(
-    'version' => 'latest',
-    'region'  => '',
-    'endpoint' => 'http://'.$ENDPOINT,
-    'credentials' => array(
-         'key'    => $ACCESSKEY,
-         'secret' => $SECRETKEY,
-    )
-));
+//$s3 = S3Client::factory(array(
+//    'version' => 'latest',
+//   'region'  => '',
+//    'endpoint' => 'http://'.$ENDPOINT,
+//    'credentials' => array(
+//         'key'    => $ACCESSKEY,
+//         'secret' => $SECRETKEY,
+//    )
+//));
 
 //
 // Loop through each bucket
 //
 echo 'looping through buckets';
-try {
-    $result = $s3->listBuckets(array());
-    foreach ($result['Buckets'] as $bucket) {
-        echo $bucket['Name'];
-        echo "<br>";
-    }
-} catch (S3Exception $e) {
+//try {
+//    $result = $s3->listBuckets(array());
+//    foreach ($result['Buckets'] as $bucket) {
+//        echo $bucket['Name'];
+//        echo "<br>";
+//    }
+//} catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
-}
+//}
 
 ?>
 
