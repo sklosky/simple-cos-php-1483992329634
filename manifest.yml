@@ -3,6 +3,6 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  name: simple-cos-php-dev
-  host: simple-cos-php-dev
+  name: simple-cos-php
+  host: simple-cos-php
   disk_quota: 1024M
