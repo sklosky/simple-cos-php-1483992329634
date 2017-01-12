@@ -37,7 +37,7 @@ $s3 = S3Client::factory(array(
 			</td>
 			<td>
 				<h1 id = "message"><?php echo $mystring; ?></h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
+				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>. This is branch 1.
 				<?php
 					echo 'looping through buckets';
 					$result = $s3->listBuckets(array());
